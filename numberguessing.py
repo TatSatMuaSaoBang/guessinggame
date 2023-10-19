@@ -24,13 +24,21 @@ if first in agree_words:
     while True:
         typing=int(input("=> "))
         if int(typing) == int((correct_number)):
-            quit()
+            print("Wanna continue? => ")
+            typing2=input("=> ")
+            if typing2 in agree_words:
+                print("Now guessing the letter on the number u dummy...")
+                typing3=int(input("=> "))
+                if typing3 in random_numbers:
+                    
+            else:
+                quit()
         elif int(typing) < int((correct_number)):
             print("increase the length of the pre guessing numbers kiddo")
             continue
         elif int(typing) > int((correct_number)):
             print("that kinda long reduce it")
             continue
-            
+
 elif first in not_words:
     quit()
