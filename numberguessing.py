@@ -1,5 +1,6 @@
 import random
 from yes import *
+from ham import *
 #Cai dat gia tri
 random_numbers = [random.randint(100000, 10000000)]
 correct_number = "" 
@@ -28,9 +29,12 @@ if first in agree_words:
             typing2=input("=> ")
             if typing2 in agree_words:
                 print("Now guessing the letter on the number u dummy...")
-                typing3=int(input("=> "))
-                if typing3 in random_numbers:
-                    
+                while typing2 in agree_words:
+                    typing3=int(input("=> "))
+                    if typing3 in random_numbers:
+                        print(f"Congratiation you have mathces the right letter in the guessing number {finding_number(typing3, random_numbers)}")
+                    else:
+                        print("Try another number I tryly believe it will match some letter")
             else:
                 quit()
         elif int(typing) < int((correct_number)):
