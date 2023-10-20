@@ -1,9 +1,18 @@
 # Finding number require
-def finding_number(Element_to_find, list):
-    return list.index(Element_to_find)
+def finding_number(Element_to_find, random_number):
+    return random_number.index(Element_to_find)
+random_number=[2,3,4,5,6]
+answear=""
+random=[]
+for i in range(0,len(random_number)):
+    random.append("#")
+    answear = answear + str(random_number[i])
 
-list=[2,3,1]
-idk=1
-print(finding_number(idk, list))
-print(f"Congratiation you have mathces the right letter in the guessing number {finding_number(idk, list)}")
-                    
+def finding_numberhidden(random_number, dauvao):
+    random=[]
+    for i in range(0,len(random_number)):
+        random.append("#")
+    if dauvao in random_number:
+        idk=finding_number(int(dauvao), random_number)
+        random[idk] = dauvao
+    return random

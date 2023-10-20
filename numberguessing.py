@@ -30,9 +30,15 @@ if first in agree_words:
             if typing2 in agree_words:
                 print("Now guessing the letter on the number u dummy...")
                 while typing2 in agree_words:
+                    random=[]
+                    for i in range(0,len(random_number)):
+                            random.append("#")
                     typing3=int(input("=> "))
-                    if typing3 in random_numbers:
-                        print(f"Congratiation you have mathces the right letter in the guessing number {finding_number(typing3, random_numbers)}")
+                    if typing3 == 109001:
+                        print()
+                    elif typing3 in random_numbers:
+                        idk=finding_number(int(typing3), random_number)
+                        random[idk] = typing3
                     else:
                         print("Try another number I tryly believe it will match some letter")
             else:
