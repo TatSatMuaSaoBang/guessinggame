@@ -1,8 +1,10 @@
 import random
+
+random_numbers = [random.randint(100000, 10000000)]
+
 from yes import *
 from ham import *
 #Cai dat gia tri
-random_numbers = [random.randint(100000, 10000000)]
 correct_number = "" 
 
 # Ghi ra dap ane
@@ -24,8 +26,8 @@ if first in agree_words:
     print("Type Your guessing number length into here \/")
     while True:
         typing=int(input("=> "))
-        if int(typing) == int((correct_number)):
-            print("Wanna continue? => ")
+        if int(typing) == len(random_numbers):
+            print("Wanna continue?")
             typing2=input("=> ")
             if typing2 in agree_words:
                 print("Now guessing the letter on the number u dummy...")
@@ -43,10 +45,10 @@ if first in agree_words:
                         print("Try another number I tryly believe it will match some letter")
             else:
                 quit()
-        elif int(typing) < int((correct_number)):
+        elif int(typing) < len(random_numbers):
             print("increase the length of the pre guessing numbers kiddo")
             continue
-        elif int(typing) > int((correct_number)):
+        elif int(typing) > len(random_numbers):
             print("that kinda long reduce it")
             continue
 
