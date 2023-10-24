@@ -17,6 +17,9 @@ for i in range(0,len(random_numbers)):
 random_numbers=[]
 for i in range(0,len(correct_number)):
     random_numbers.append(correct_number[i])
+print(random_numbers)
+#Dap an cua nguoi dung
+loigiai=[]
 
 print(len(random_numbers))
 
@@ -32,15 +35,11 @@ if first in agree_words:
             if typing2 in agree_words:
                 print("Now guessing the letter on the number u dummy...")
                 while typing2 in agree_words:
-                    random=[]
-                    for i in range(0,len(random_number)):
-                            random.append("#")
-                    typing3=int(input("=> "))
-                    if typing3 == 109001:
-                        print()
+                    typing3=input("=> ")
+                    if typing3 in notshowingword:
+                        print(finding_numberhidden(random_numbers, loigiai))
                     elif typing3 in random_numbers:
-                        idk=finding_number(int(typing3), random_number)
-                        random[idk] = typing3
+                        loigiai.append(typing3)
                     else:
                         print("Try another number I tryly believe it will match some letter")
             else:

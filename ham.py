@@ -12,7 +12,11 @@ def finding_numberhidden(random_number, dauvao):
     random=[]
     for i in range(0,len(random_number)):
         random.append("#")
-    if dauvao in random_number:
-        idk=finding_number(int(dauvao), random_number)
-        random[idk] = dauvao
+    for i in range(0,len(dauvao)):
+        if dauvao[i] in random_number:
+            idk=finding_number(dauvao[i], random_number)
+            if dauvao[i] in random:
+                random
+            else:
+                random[idk] = dauvao[i]
     return random
